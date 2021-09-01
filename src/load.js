@@ -1,7 +1,8 @@
+import "./styles.css";
+
 function createHeader() {
     let header = document.createElement('header');
     header.classList.add('header');
-    header.style.background = 'blue';
 
     let restaurantName = document.createElement('h1');
     restaurantName.classList.add('restaurant-name');
@@ -15,7 +16,7 @@ function createHeader() {
 
 function createNavBar() {
     const nav = document.createElement('nav');
-    nav.style.background = 'red';
+    //nav.style.background = 'red';
 
     const homeButton = document.createElement('button');
     homeButton.classList.add('nav-button');
@@ -36,9 +37,26 @@ function createNavBar() {
     return nav;
 }
 
+function createBody() {
+    const body = document.createElement('div');
+    body.setAttribute('id', 'body');
+    body.innerText = 'Test';
+
+    return body;
+}
+
+function createFooter() {
+    const footer = document.createElement('footer');
+    footer.innerText = 'Test';
+
+    return footer;
+}
+
 const initPage = () => {
     let contentDiv = document.getElementById('content');
     contentDiv.appendChild(createHeader());
+    contentDiv.appendChild(createBody());
+    contentDiv.appendChild(createFooter());
 }
 
 export { initPage };

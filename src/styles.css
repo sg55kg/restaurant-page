@@ -1,0 +1,52 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 0;
+}
+
+#content {
+    height: 100vh;
+    padding-bottom: 200px;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.63);
+    height: 200px;
+    text-align: center;
+    color: white;
+    height: 150px;
+}
+
+.header > h1 {
+    margin: 0;
+    padding-top: 20px;
+    font: 50px 'Allison', cursive;
+}
+
+nav {
+    background: none;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.nav-button {
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
+    border: none;
+}
+
+#body {
+    height: 300px;
+    background-color: blue;
+}
+
+footer {
+    background-color: black;
+    color:white;
+    
+}
