@@ -1,4 +1,7 @@
 import "./styles.css";
+import { homeBody } from "./home";
+import { createMenu } from "./menu";
+import { createContact } from "./contact";
 
 function createHeader() {
     let header = document.createElement('header');
@@ -16,19 +19,33 @@ function createHeader() {
 
 function createNavBar() {
     const nav = document.createElement('nav');
-    //nav.style.background = 'red';
 
     const homeButton = document.createElement('button');
     homeButton.classList.add('nav-button');
     homeButton.innerText = 'Home';
 
+    homeButton.addEventListener('click', () => {
+        body.innerHTML = "";
+        homeBody();
+    })
+
     const menuButton = document.createElement('button');
     menuButton.classList.add('nav-button');
     menuButton.innerText = 'Menu';
 
+    menuButton.addEventListener('click', () => {
+        body.innerHTML = "";
+        createMenu();
+    })
+
     const contactButton = document.createElement('button');
     contactButton.classList.add('nav-button');
     contactButton.innerText = ('Contact us');
+
+    contactButton.addEventListener('click', () => {
+        body.innerHTML = "";
+        createContact();
+    })
 
     nav.appendChild(homeButton);
     nav.appendChild(menuButton);
@@ -40,7 +57,7 @@ function createNavBar() {
 function createBody() {
     const body = document.createElement('div');
     body.setAttribute('id', 'body');
-    body.innerText = 'Test';
+    //body.innerText = 'Test';
 
     return body;
 }
@@ -57,6 +74,8 @@ const initPage = () => {
     contentDiv.appendChild(createHeader());
     contentDiv.appendChild(createBody());
     contentDiv.appendChild(createFooter());
+
+    homeBody();
 }
 
 export { initPage };
