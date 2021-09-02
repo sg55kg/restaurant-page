@@ -20,6 +20,10 @@ const createMenu = () => {
     menuDiv.appendChild(menuHeaderDiv);
     menuDiv.appendChild(createMenuItem('Ramen', 'It\'s decent ig'));
     menuDiv.appendChild(createMenuItem('Grilled Cheese', 'Lol we literally serve grilled cheese'));
+    menuDiv.appendChild(createMenuItem('Spicy Ramen', 'Like Ramen but spicy'));
+    menuDiv.appendChild(createMenuItem('House salad', 'For vegetarians'));
+    menuDiv.appendChild(createMenuItem('Shrimp ramen', 'Unavailable'));
+    menuDiv.appendChild(createMenuItem('Steak', 'Grade D fit for human consumption'));
 
     return menuDiv;
 

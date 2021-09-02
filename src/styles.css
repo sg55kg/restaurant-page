@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.863);
 }
 
 body {
@@ -71,6 +72,7 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: -20px;
+    z-index: 1;
 }
 
 
@@ -97,23 +99,33 @@ footer {
 
 #menu {
     background: none;
-    height: 100%;
+    margin-bottom: 50px;
+    height: 90%;
     width: 60%;
-    
+    display: flex;
+    justify-items: center;
+    align-items: center; 
+    flex-direction: column;
+    overflow: auto;
+    z-index: 0;
 }
 
 #menu-header-div {
+    margin: 30px 0;
     background-color: rgba(255, 255, 255, 0.836);
     border-radius: 8px;
+    width: 100%;
 }
 
 #menu-item {
     background-color: rgba(0, 0, 0, 0.63);
     color: white;
-    margin: 30px 0;
+    margin: 20px 0;
     border-radius: 8px;
     width: 90%;
     padding: 10px;
+    justify-self: center;
+    
 }
 
 
