@@ -1,4 +1,4 @@
-import { createParagraph, createSubHeader } from "./home";
+import { createParagraph, createSubHeader } from "./load";
 
 export const createMenu = () => {
     const body = document.getElementById('body');

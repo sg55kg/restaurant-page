@@ -168,3 +168,12 @@ footer {
 #contact-div > p {
     margin-left: 50px;
 }
+
+#map-div {
+    height: 100px;
+    width: 100px;
+}
+
+#map {
+    height: 100%;
+}

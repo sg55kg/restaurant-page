@@ -57,7 +57,6 @@ function createNavBar() {
 function createBody() {
     const body = document.createElement('div');
     body.setAttribute('id', 'body');
-    //body.innerText = 'Test';
 
     return body;
 }
@@ -67,6 +66,20 @@ function createFooter() {
     footer.innerText = 'Test';
 
     return footer;
+}
+
+export const createParagraph = (text) => {
+    const paragraph = document.createElement('p');
+    paragraph.classList.add('home-para');
+    paragraph.innerText = text;
+    return paragraph;
+}
+
+export const createSubHeader = (text) => {
+    const subHeader = document.createElement('h3');
+    subHeader.classList.add('subheader');
+    subHeader.innerText = text;
+    return subHeader;
 }
 
 export const initPage = () => {

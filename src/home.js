@@ -1,3 +1,5 @@
+import { createParagraph, createSubHeader } from './load';
+
 export const homeBody = () => {
     const body = document.getElementById('body');
 
@@ -20,16 +22,3 @@ export const homeBody = () => {
     return homeBodyDiv;
 }
 
-export const createParagraph = (text) => {
-    const paragraph = document.createElement('p');
-    paragraph.classList.add('home-para');
-    paragraph.innerText = text;
-    return paragraph;
-}
-
-export const createSubHeader = (text) => {
-    const subHeader = document.createElement('h3');
-    subHeader.classList.add('subheader');
-    subHeader.innerText = text;
-    return subHeader;
-}
