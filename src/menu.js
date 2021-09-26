@@ -1,6 +1,6 @@
-import { createParagraph } from "./home";
+import { createParagraph, createSubHeader } from "./home";
 
-const createMenu = () => {
+export const createMenu = () => {
     const body = document.getElementById('body');
 
     const menuDiv = document.createElement('div');
@@ -9,21 +9,24 @@ const createMenu = () => {
     const menuHeaderDiv = document.createElement('div');
     menuHeaderDiv.setAttribute('id', 'menu-header-div');
     
-    const menuHeader = document.createElement('h3');
-    menuHeader.classList.add('subheader');
-    menuHeader.innerText = 'Check out our menu pls'
-
-    menuHeaderDiv.appendChild(menuHeader);
+    menuHeaderDiv.appendChild(createSubHeader('Menu'));
 
     body.appendChild(menuDiv);
 
     menuDiv.appendChild(menuHeaderDiv);
-    menuDiv.appendChild(createMenuItem('Ramen', 'It\'s decent ig'));
-    menuDiv.appendChild(createMenuItem('Grilled Cheese', 'Lol we literally serve grilled cheese'));
-    menuDiv.appendChild(createMenuItem('Spicy Ramen', 'Like Ramen but spicy'));
+    menuDiv.appendChild(createMenuItem(
+            'Ramen', 
+            'Our classic recipe in chicken broth with tofu, chicken, or shrimp.'
+        ));
+    menuDiv.appendChild(createMenuItem(
+            'Spicy Ramen', 
+            'Spicy beef bone broth with tofu, chicken, or shrimp'
+        ));
+    menuDiv.appendChild(createMenuItem(
+            'Chicken Teriyaki', 
+            'Classic dish with fried rice and grilled teriyaki chicken'
+        ));
     menuDiv.appendChild(createMenuItem('House salad', 'For vegetarians'));
-    menuDiv.appendChild(createMenuItem('Shrimp ramen', 'Unavailable'));
-    menuDiv.appendChild(createMenuItem('Steak', 'Grade D fit for human consumption'));
 
     return menuDiv;
 
@@ -33,10 +36,9 @@ const createMenuItem = (item, description) => {
     const itemDiv = document.createElement('div');
     itemDiv.setAttribute('id', 'menu-item');
 
-    itemDiv.innerText = item;
+    //add third argument for picture URL and insert a picture of the food into each itemDiv
+    itemDiv.appendChild(createSubHeader(item));
     itemDiv.appendChild(createParagraph(description));
 
     return itemDiv;
 }
-
-export { createMenu };

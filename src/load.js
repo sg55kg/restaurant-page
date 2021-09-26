@@ -69,7 +69,7 @@ function createFooter() {
     return footer;
 }
 
-const initPage = () => {
+export const initPage = () => {
     let contentDiv = document.getElementById('content');
     contentDiv.appendChild(createHeader());
     contentDiv.appendChild(createBody());
@@ -77,5 +77,3 @@ const initPage = () => {
 
     homeBody();
 }
-
-export { initPage };

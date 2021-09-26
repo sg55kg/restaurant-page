@@ -1,3 +1,4 @@
+/* Main elements */
 html {
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.863);
@@ -14,10 +15,11 @@ body {
     background-repeat: no-repeat; 
     background-position: center; 
     background-size: cover; 
-    
-
-
 }
+
+
+
+/* Header styles */
 
 .header {
     background-color: rgba(0, 0, 0, 0.63);
@@ -56,6 +58,9 @@ nav {
     border: 3px solid black;
 }
 
+
+/* Body style */
+
 #body {
     height: 100%;
     /* background-color: rgb(65, 65, 73); */
@@ -64,6 +69,9 @@ nav {
     justify-content: center;
     /* margin-bottom: 120px; */
 }
+
+
+/* Footer styles */
 
 footer {
     background-color: rgba(0, 0, 0, 0.63);
@@ -84,12 +92,17 @@ footer {
     text-align: center;
     width: 65%;
     margin: 60px 0px;
+    height: 500px;
     border-radius: 8px;
 }
 
 .subheader {
     font: 25px 'Roboto Mono', monospace;
     margin-top: 10px;
+}
+
+.home-para {
+    font: 15px 'Roboto Mono', monospace;
 }
 
 
@@ -106,15 +119,22 @@ footer {
     justify-items: center;
     align-items: center; 
     flex-direction: column;
-    overflow: auto;
+    overflow-y: scroll;
     z-index: 0;
 }
+
 
 #menu-header-div {
     margin: 30px 0;
     background-color: rgba(255, 255, 255, 0.836);
     border-radius: 8px;
     width: 100%;
+    display: flex;
+}
+
+#menu-header-div > .subheader {
+    margin: 20px 20px;
+    align-self:center;
 }
 
 #menu-item {
