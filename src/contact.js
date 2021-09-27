@@ -8,28 +8,22 @@ export const createContact = () => {
 
     const mapDiv = document.createElement('div');
     mapDiv.setAttribute('id', 'map');
-
-    const initMap = () => {
-        const map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
-    })}
-
-    mapDiv.appendChild(initMap);
-    
     contactDiv.appendChild(mapDiv);
+    let map;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+        });
+    }
+
+    
+    
     contactDiv.appendChild(createSubHeader('Contact us'));
-    contactDiv.appendChild(createParagraph('Insert contact info here'));
+    contactDiv.appendChild(createParagraph('Phone: 📞 (123)-456-789'));
 
     body.appendChild(contactDiv);
 
-    return contactDiv;
+    return { contactDiv };
 }
-
-// var map;
-//       function initMap() {
-//         map = new google.maps.Map(document.getElementById('map'), {
-//           center: {lat: -34.397, lng: 150.644},
-//           zoom: 8
-//         });
-//       }

@@ -21,10 +21,13 @@ function createNavBar() {
     const nav = document.createElement('nav');
 
     const homeButton = document.createElement('button');
-    homeButton.classList.add('nav-button');
+    homeButton.classList.add('nav-button', 'active');
     homeButton.innerText = 'Home';
 
     homeButton.addEventListener('click', () => {
+        homeButton.classList.add('active');
+        menuButton.classList.remove('active');
+        contactButton.classList.remove('active');
         body.innerHTML = "";
         homeBody();
     })
@@ -34,6 +37,9 @@ function createNavBar() {
     menuButton.innerText = 'Menu';
 
     menuButton.addEventListener('click', () => {
+        menuButton.classList.add('active');
+        homeButton.classList.remove('active');
+        contactButton.classList.remove('active');
         body.innerHTML = "";
         createMenu();
     })
@@ -43,6 +49,9 @@ function createNavBar() {
     contactButton.innerText = ('Contact us');
 
     contactButton.addEventListener('click', () => {
+        contactButton.classList.add('active');
+        homeButton.classList.remove('active');
+        menuButton.classList.remove('active');
         body.innerHTML = "";
         createContact();
     })
