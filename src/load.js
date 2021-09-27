@@ -72,7 +72,8 @@ function createBody() {
 
 function createFooter() {
     const footer = document.createElement('footer');
-    footer.innerText = 'Test';
+    footer.innerText = 'Copyright © 2021 sg55kg';
+    
 
     return footer;
 }
