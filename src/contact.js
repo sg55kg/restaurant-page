@@ -7,23 +7,19 @@ export const createContact = () => {
     contactDiv.setAttribute('id', 'contact-div');
 
     const mapDiv = document.createElement('div');
-    mapDiv.setAttribute('id', 'map');
-    contactDiv.appendChild(mapDiv);
-    let map;
+    mapDiv.setAttribute('id', 'map-div');
 
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -34.397, lng: 150.644},
-            zoom: 8
-        });
-    }
+    mapDiv.innerHTML = '<iframe id="map" src="https://www.google.com/maps/d/u/0/embed?mid=1z_SKzt9cpSRWG1cA44l5cv0k-3D4423F"></iframe>'
+    
 
     
     
     contactDiv.appendChild(createSubHeader('Contact us'));
     contactDiv.appendChild(createParagraph('Phone: 📞 (123)-456-789'));
+    contactDiv.appendChild(mapDiv);
 
     body.appendChild(contactDiv);
 
     return { contactDiv };
 }
+
