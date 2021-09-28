@@ -9,7 +9,7 @@ function createHeader() {
 
     let restaurantName = document.createElement('h1');
     restaurantName.classList.add('restaurant-name');
-    restaurantName.innerText = 'Restaurant';
+    restaurantName.innerText = 'Ramen Restaurant';
 
     header.appendChild(restaurantName);
     header.appendChild(createNavBar());
